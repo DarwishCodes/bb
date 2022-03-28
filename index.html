@@ -1,11 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Beautiful Beginnings</title>
 
         <meta name="robots" content="noindex, nofollow">
-        <meta http-equiv="X-UA-Compatible" content="IE=9" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="css/normalize.min..css"/>
         <link rel="stylesheet" href="css/main.css"/>
@@ -14,7 +19,7 @@
         
 
     </head> 
-    <body>
+    <body class="body">
         <div class="page-wrap">
             <header class="page-header">
                 <div class="header-top">
@@ -40,8 +45,9 @@
                             <i class="fa fa-shopping-cart"></i>
                             <span class="visually-hidden">Go to Cart</span>
                         </a>
-                        <a href="#" class="menu-toggle">
+                        <a id="menuBtn" href="#" class="menu-toggle">
                             <span class="visually-hidden">Toggle Menu</span>
+                            <i class="fa fa-bars"></i>
                         </a>
                     </div>
 
@@ -51,7 +57,7 @@
                     <div class="site-motto">Children Our greatest earthly blessing.</div>
 
                     <div class="site-logo">
-                        <img src="images/bb-logo.png" alt="Beautiful Beginnings: Celebrating baby and child">
+                        <img srcset=images/bb-logo@2x.png 2x” alt="Beautiful Beginnings: Celebrating baby and child" src=images/bb-logo.png/>
                     </div>
 
                     <div class="site-search">
@@ -79,13 +85,15 @@
                     </div>
 
                 </div>
-                <div class="header-bottom">
+                <div id="navMenu" class="header-bottom">
 
                     <div class="site-search">
                         <form class="site-search__form">
                             <label for="headerMenuSiteSeach" class="visually-hidden">Search this site...</label>
                             <input id="headerMenuSiteSeach" type="search" placeholder="Search this site.."/>
                             <button class="site-search__button">
+                                <!-- added a search icon here -->
+                                <i class="fa fa-search"></i>
                                 <span class="visually-hidden">Submit Search</span>
                             </button>
                         </form>
@@ -117,8 +125,8 @@
 
                 <div class="slideshow">
                     <section class="slideshow__slide slide">
-                        <figure class="slide__bg">
-                            <img src="images/bb-slideshow-example-1.jpg" />
+                        <figure class="slide__bg slide__bg--1">
+                            <!-- <img src="images/bb-slideshow-example-1.jpg" /> -->
                             <figcaption>Baby Dean - Wheaton, illinois</figcaption>
                         </figure>
                         <div class="slide__content">
@@ -128,8 +136,28 @@
                                 <span class="button button--primary">Shop Crib Beding</span>
                             </a>
                         </div>
+                        <div class="slide__border">
+                            &nbsp;
+                        </div>
                     </section>
+
                     <!-- need another slide and to setup slideshow functioanlity -->
+                    <section class="slideshow__slide slide">
+                        <figure class="slide__bg slide__bg--1">
+                            <!-- <img src="images/bb-slideshow-example-1.jpg" /> -->
+                            <figcaption>Baby Dean - Wheaton, illinois</figcaption>
+                        </figure>
+                        <div class="slide__content">
+                            <a href="#" class="cta">
+                                <h2 class="cta__title">Slide 2</h2>
+                                <p class="cta__description">Save up to 50% off on select crib bedding now through Memorial Day!</p>
+                                <span class="button button--primary">Shop Crib Beding</span>
+                            </a>
+                        </div>
+                        <div class="slide__border">
+                            &nbsp;
+                        </div>
+                    </section>
                 </div>
 
                 <section class="featured-widget">
@@ -173,119 +201,126 @@
                 </div>
 
             </main>
-            <footer class="page-footer">
-                <div class="footer-top">
+            <footer class="footer">
+                <div class="page-footer">
+                    <div class="footer-top">
 
-                    <div class="page-footer__column">
-                        <div class="expander">
-                            <h2 class="expander__toggle">About Us</h2>
-                            <div class="expander__panel">
-                                <ul class="link-list">
-                                    <li><a href="#">Our Story</a></li>
-                                    <li><a href="#">Baby Registry</a></li>
-                                    <li><a href="#">Store Location</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                </ul>
+                        <div class="page-footer__column page-footer__column--w100">
+                            <div class="expander">
+                                <h2 class="expander__toggle">About Us <span class="expander__icon"><i class="fa fa-plus" aria-hidden="true"></i></span> </h2>
+                                <div class="expander__panel expander__panel--hide">
+                                    <ul class="link-list">
+                                        <li><a href="#">Our Story</a></li>
+                                        <li><a href="#">Baby Registry</a></li>
+                                        <li><a href="#">Store Location</a></li>
+                                        <li><a href="#">Testimonials</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="page-footer__column">
-                        <div class="expander">
-                            <h2 class="expander__toggle">Service</h2>
-                            <div class="expander__panel">
-                                <ul class="link-list">
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Order Status</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">Shipping Policy</a></li>
-                                    <li><a href="#">Return Policy</a></li>
-                                    <li><a href="#">Newsletter</a></li>
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">Live Chat</a></li>
-                                </ul>
+    
+                        <div class="page-footer__column page-footer__column--w100">
+                            <div class="expander">
+                                <h2 class="expander__toggle">Service <span class="expander__icon"><i class="fa fa-plus" aria-hidden="true"></i></span> </h2>
+                                <div class="expander__panel expander__panel--hide">
+                                    <ul class="link-list">
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Order Status</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Shipping Policy</a></li>
+                                        <li><a href="#">Return Policy</a></li>
+                                        <li><a href="#">Newsletter</a></li>
+                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="#">Live Chat</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="page-footer__column">
-                        <div class="expander">
-                            <h2 class="expander__toggle">Shop</h2>
-                            <div class="expander__panel">
-                                <ul class="link-list">
-                                    <li><a href="#">Baby Apparel</a></li>
-                                    <li><a href="#">Baby Gifts</a></li>
-                                    <li><a href="#">Christening</a></li>
-                                    <li><a href="#">Furniture</a></li>
-                                    <li><a href="#">Bedding</a></li>
-                                    <li><a href="#">Decor</a></li>
-                                    <li><a href="#">Lighting</a></li>
-                                    <li><a href="#">Sale</a></li>
-                                    <li><a href="#">Brands</a></li>
-                                </ul>
+    
+                        <div class="page-footer__column page-footer__column--w100">
+                            <div class="expander">
+                                <h2 class="expander__toggle">Shop <span class="expander__icon"><i class="fa fa-plus" aria-hidden="true"></i></span> </h2>
+                                <div class="expander__panel expander__panel--hide">
+                                    <ul class="link-list">
+                                        <li><a href="#">Baby Apparel</a></li>
+                                        <li><a href="#">Baby Gifts</a></li>
+                                        <li><a href="#">Christening</a></li>
+                                        <li><a href="#">Furniture</a></li>
+                                        <li><a href="#">Bedding</a></li>
+                                        <li><a href="#">Decor</a></li>
+                                        <li><a href="#">Lighting</a></li>
+                                        <li><a href="#">Sale</a></li>
+                                        <li><a href="#">Brands</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="page-footer__column">
-                        <div class="wysiwyg">
-                            <h2>Contact Us</h2>
-                            <p><strong>Beautiful Beginnings</strong><br/>4472 Lawn Avenue<br/>Western Springs, IL, 60558</p>
-                            <p>708.246.1212</p>
-                            <p><strong>Store Hours</strong><br/>Monday - Friday 10am-5:30pm<br/>Saturday - 10am - 5pm<br/>Sunday - Closed</p>
+    
+                        <div class="page-footer__column">
+                            <div class="wysiwyg">
+                                <h2>Contact Us</h2>
+                                <p><strong>Beautiful Beginnings</strong><br/>4472 Lawn Avenue<br/>Western Springs, IL, 60558</p>
+                                <p>708.246.1212</p>
+                                <p><strong>Store Hours</strong><br/>Monday - Friday 10am-5:30pm<br/>Saturday - 10am - 5pm<br/>Sunday - Closed</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="page-footer__column">
-                        <div class="site-social">
-                            <h2>Follow Us</h2>
-                            <ul class="social-list">
-                                <li>
-                                    <a href="#" class="fa fa-facebook">Facebook</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fa fa-twitter">Twitter</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fa fa-pinterest">Pinterest</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fa fa-youtube">Youtube</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fa fa-google">Google Plus</a>
-                                </li>
-                            </ul>
+    
+                        <div class="page-footer__column">
+                            <div class="site-social">
+                                <h2>Follow Us</h2>
+                                <ul class="social-list">
+                                    <li>
+                                        <a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-pinterest"></i><span>Pinterest</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-youtube"></i><span>Youtube</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <div class="newsletter">
+                                <h2>Newsletter</h2>
+                                <p>Get the latest promotions and special offers delivered directly toyour inbox!</p>
+                                <form class="newsletter__form">
+                                    <label for="siteNewsletterEmail" class="visually-hidden">Email Address</label>
+                                    <input id="siteNewsletterEmail" type="text" placeholder="Email Address..." />
+                                    <button class="button button--primary">Send</button>
+                                </form>
+                            </div>
                         </div>
-
-                        <div class="newsletter">
-                            <h2>Newsletter</h2>
-                            <p>Get the latest promotions and special offers delivered directly toyour inbox!</p>
-                            <form class="newsletter__form">
-                                <label for="siteNewsletterEmail" class="visually-hidden">Email Address</label>
-                                <input id="siteNewsletterEmail" type="text" placeholder="Email Address..." />
-                                <button class="button button--primary">Send</button>
-                            </form>
-                        </div>
+    
                     </div>
 
                 </div>
                 <div class="footer-bottom">
-
+    
                     <div class="page-footer__column">
                         <div class="copyright">
+                            <div class="site-logo site-logo--tablet">
+                                <img srcset=images/bb-logo@2x.png 2x” src=images/bb-logo.png/>
+                            </div>
                             <p><span class="copyright__text">@2013 Beautiful Beginnings. All Rights Reserved</span> <a href="#">Site Map</a> <a href="#">Privacy Policy</a> <a href="#">Terms &amp; Conditions</a></p>
                             <p class="ae-logo"><img src="images/powered-by-americaneagle.png" /> Web Site design and development by Americaneagle.com</p>
                         </div>
                     </div>
 
                     <div class="page-footer__column">
-                        <div class="site-logo">
-                            <img src="images/bb-logo.png">
+                        <div class="site-logo site-logo__footer">
+                            <img srcset=images/bb-logo@2x.png 2x” src=images/bb-logo.png/>
                         </div>
                     </div>
 
                 </div>
+                
             </footer>
         </div>
 
